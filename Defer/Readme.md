@@ -1,0 +1,3 @@
+**Defer** statement is one of the most powerful and interesting features of Golang. One of the primary uses of the defer statement is for cleaning up the resources in our code, such as opened files and network connections.
+The order of execution of the defer statement is like a stack, LIFO. Moreover, the value of variables in calling the defer is determined at the call time, not at the execution time of the defer statement.
+Additionally, we should care not to use the defer command in the loops, because closing the resources will postpone till the end of the function. Consequently, it can cause memory leakage, or prevent other programs from using the resources.
